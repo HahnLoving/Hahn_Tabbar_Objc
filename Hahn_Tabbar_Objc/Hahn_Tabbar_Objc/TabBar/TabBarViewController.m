@@ -22,9 +22,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [self addSubViewsControllers];
-    [self customTabbarItem];
+    [self tabBarControllerAddChildViewController];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -32,39 +30,41 @@
     self.navigationController.navigationBarHidden = YES;
 }
 
-# pragma mark - 初始化TabBar里面的控制权
--(void)addSubViewsControllers
+# pragma mark - 添加子类的数据
+- (void)tabBarControllerAddChildViewController
 {
     NSArray *classControllers = [NSArray array];
     classControllers = @[@"Demo1ViewController", @"Demo2ViewController", @"Demo3ViewController", @"Demo4ViewController", @"Demo5ViewController"];
-    NSMutableArray *conArr = [NSMutableArray array];
-    for (int i = 0; i < classControllers.count; i ++) {
-        Class cts = NSClassFromString(classControllers[i]);
-        UIViewController *vc = [[cts alloc] init];
-        UINavigationController *naVC = [[UINavigationController alloc] initWithRootViewController:vc];
-        [conArr addObject:naVC];
-    }
-    self.viewControllers = conArr;
-}
-
-# pragma mark - 初始化TabBar里面的图标和文字
--(void)customTabbarItem
-{
     NSArray *titles = @[@"首页", @"附近", @"发布", @"聊天", @"我的"];
     NSArray *normalImages = @[@"home_normal", @"mycity_normal", @"mycity_normal", @"message_normal", @"account_normal"];
     NSArray *selectImages = @[@"home_highlight", @"mycity_highlight", @"mycity_normal", @"message_highlight", @"account_highlight"];
     
-    for (int i = 0; i < titles.count; i++) {
-        UIViewController *vc = self.viewControllers[i];
-        UIImage *normalImage = [[UIImage imageNamed:normalImages[i]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        UIImage *selectImage = [[UIImage imageNamed:selectImages[i]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        vc.tabBarItem = [[UITabBarItem alloc] initWithTitle:titles[i] image:normalImage selectedImage:selectImage];
-    }
-    
-    self.tabBar.tintColor = [UIColor colorWithRed:255.0/255 green:204.0/255 blue:13.0/255 alpha:1];
-    self.tabBar.translucent = NO;
+    [self TabbarControllerAddSubViewsControllers:classControllers addTitleArray:titles addNormalImagesArray:normalImages addSelectImageArray:selectImages];
 }
 
 
+# pragma mark - 初始化Tabbar里面的元素
+- (void)TabbarControllerAddSubViewsControllers:(NSArray *)classControllersArray addTitleArray:(NSArray *)titleArray addNormalImagesArray:(NSArray *)normalImagesArray addSelectImageArray:(NSArray *)selectImageArray
+{
+    NSMutableArray *conArr = [NSMutableArray array];
+    
+    for (int i = 0; i < classControllersArray.count; i++) {
+        
+        Class cts = NSClassFromString(classControllersArray[i]);
+        UIViewController *vc = [[cts alloc] init];
+        UINavigationController *naVC = [[UINavigationController alloc] initWithRootViewController:vc];
+        [conArr addObject:naVC];
+        
+        UIImage *normalImage = [[UIImage imageNamed:normalImagesArray[i]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        UIImage *selectImage = [[UIImage imageNamed:selectImageArray[i]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        vc.tabBarItem = [[UITabBarItem alloc] initWithTitle:titleArray[i] image:normalImage selectedImage:selectImage];
+        
+    }
+    
+    self.viewControllers = conArr;
+    self.tabBar.tintColor = [UIColor colorWithRed:255.0/255 green:204.0/255 blue:13.0/255 alpha:1];
+    self.tabBar.translucent = NO;
+    
+}
 
 @end
