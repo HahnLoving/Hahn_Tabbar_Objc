@@ -1,8 +1,8 @@
 //
-//  CustomTabBarItem.h
+//  SimpleCustomDemoViewController.h
 //  Hahn_Tabbar_Objc
 //
-//  Created by Hahn on 2019/6/24.
+//  Created by Hahn on 2019/6/27.
 //  Copyright © 2019 Hahn. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CustomTabBarItem : UIButton
+@interface SimpleCustomDemoViewController : UIViewController
 
 @end
 

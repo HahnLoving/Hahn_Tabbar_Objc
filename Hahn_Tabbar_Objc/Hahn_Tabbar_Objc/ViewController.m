@@ -8,13 +8,14 @@
 
 #import "ViewController.h"
 #import "TabBar/TabBarViewController.h"
-#import "CustomTabBar/CustomTabBarViewController.h"
+#import "SimpleCustomTabBarViewController.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;                  // tableView
-
-@property (strong, nonatomic) NSMutableArray *dataArray;                      // 数据源
+// tableView
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+// 数据源
+@property (strong, nonatomic) NSMutableArray *dataArray;
 @end
 
 @implementation ViewController
@@ -31,7 +32,7 @@
 {
     [super viewDidLoad];
     [self.dataArray addObject:@"普通的tabbar"];
-    [self.dataArray addObject:@"自定义的tabbar"];
+    [self.dataArray addObject:@"图片运动和自定义点击的tabbar"];
 }
 
 # pragma mark - UITableViewDelegate 、UITableViewDataSource
@@ -62,7 +63,7 @@
     // 自定义的tabbar
     else if (indexPath.row == 1)
     {
-        [self presentViewController:[CustomTabBarViewController new] animated:YES completion:nil];
+        [self presentViewController:[SimpleCustomTabBarViewController new] animated:YES completion:nil];
     }
 }
 

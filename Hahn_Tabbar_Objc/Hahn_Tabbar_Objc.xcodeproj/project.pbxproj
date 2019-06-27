@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D858ECB22C46CFC00346833 /* SimpleCustomDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D858EC922C46CFC00346833 /* SimpleCustomDemoViewController.m */; };
 		5D99294922C0D303007BF875 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D99294822C0D303007BF875 /* AppDelegate.m */; };
 		5D99294C22C0D303007BF875 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D99294B22C0D303007BF875 /* ViewController.m */; };
 		5D99294F22C0D303007BF875 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D99294D22C0D303007BF875 /* Main.storyboard */; };
@@ -21,8 +22,7 @@
 		5DCFC32C22C0FA20005CE98D /* Demo3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFC32B22C0FA20005CE98D /* Demo3ViewController.m */; };
 		5DCFC32F22C0FA56005CE98D /* Demo4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFC32E22C0FA56005CE98D /* Demo4ViewController.m */; };
 		5DCFC33222C0FA86005CE98D /* Demo5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFC33122C0FA86005CE98D /* Demo5ViewController.m */; };
-		5DCFC33722C1014C005CE98D /* CustomTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFC33522C1014C005CE98D /* CustomTabBarViewController.m */; };
-		5DCFC33B22C104A8005CE98D /* CustomTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFC33A22C104A8005CE98D /* CustomTabBarItem.m */; };
+		5DCFC33722C1014C005CE98D /* SimpleCustomTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFC33522C1014C005CE98D /* SimpleCustomTabBarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5D858EC822C46CFC00346833 /* SimpleCustomDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleCustomDemoViewController.h; sourceTree = "<group>"; };
+		5D858EC922C46CFC00346833 /* SimpleCustomDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleCustomDemoViewController.m; sourceTree = "<group>"; };
 		5D99294422C0D303007BF875 /* Hahn_Tabbar_Objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hahn_Tabbar_Objc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D99294722C0D303007BF875 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5D99294822C0D303007BF875 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -71,10 +73,8 @@
 		5DCFC32E22C0FA56005CE98D /* Demo4ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo4ViewController.m; sourceTree = "<group>"; };
 		5DCFC33022C0FA86005CE98D /* Demo5ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo5ViewController.h; sourceTree = "<group>"; };
 		5DCFC33122C0FA86005CE98D /* Demo5ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo5ViewController.m; sourceTree = "<group>"; };
-		5DCFC33422C1014C005CE98D /* CustomTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTabBarViewController.h; sourceTree = "<group>"; };
-		5DCFC33522C1014C005CE98D /* CustomTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarViewController.m; sourceTree = "<group>"; };
-		5DCFC33922C104A8005CE98D /* CustomTabBarItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTabBarItem.h; sourceTree = "<group>"; };
-		5DCFC33A22C104A8005CE98D /* CustomTabBarItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarItem.m; sourceTree = "<group>"; };
+		5DCFC33422C1014C005CE98D /* SimpleCustomTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleCustomTabBarViewController.h; sourceTree = "<group>"; };
+		5DCFC33522C1014C005CE98D /* SimpleCustomTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleCustomTabBarViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +127,7 @@
 			children = (
 				5DCFC32322C0F9B8005CE98D /* DemoVC */,
 				5D99297922C0F6F2007BF875 /* TabBar */,
-				5DCFC33322C1010D005CE98D /* CustomTabBar */,
+				5DCFC33322C1010D005CE98D /* SimpleCustomTabBar */,
 				5D99294722C0D303007BF875 /* AppDelegate.h */,
 				5D99294822C0D303007BF875 /* AppDelegate.m */,
 				5D99294A22C0D303007BF875 /* ViewController.h */,
@@ -185,15 +185,15 @@
 			path = DemoVC;
 			sourceTree = "<group>";
 		};
-		5DCFC33322C1010D005CE98D /* CustomTabBar */ = {
+		5DCFC33322C1010D005CE98D /* SimpleCustomTabBar */ = {
 			isa = PBXGroup;
 			children = (
-				5DCFC33422C1014C005CE98D /* CustomTabBarViewController.h */,
-				5DCFC33522C1014C005CE98D /* CustomTabBarViewController.m */,
-				5DCFC33922C104A8005CE98D /* CustomTabBarItem.h */,
-				5DCFC33A22C104A8005CE98D /* CustomTabBarItem.m */,
+				5DCFC33422C1014C005CE98D /* SimpleCustomTabBarViewController.h */,
+				5DCFC33522C1014C005CE98D /* SimpleCustomTabBarViewController.m */,
+				5D858EC822C46CFC00346833 /* SimpleCustomDemoViewController.h */,
+				5D858EC922C46CFC00346833 /* SimpleCustomDemoViewController.m */,
 			);
-			path = CustomTabBar;
+			path = SimpleCustomTabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,12 +331,12 @@
 				5DCFC31F22C0F895005CE98D /* TabBarViewController.m in Sources */,
 				5D99294C22C0D303007BF875 /* ViewController.m in Sources */,
 				5DCFC32622C0F9DB005CE98D /* Demo1ViewController.m in Sources */,
-				5DCFC33722C1014C005CE98D /* CustomTabBarViewController.m in Sources */,
-				5DCFC33B22C104A8005CE98D /* CustomTabBarItem.m in Sources */,
+				5DCFC33722C1014C005CE98D /* SimpleCustomTabBarViewController.m in Sources */,
 				5D99295722C0D303007BF875 /* main.m in Sources */,
 				5DCFC32C22C0FA20005CE98D /* Demo3ViewController.m in Sources */,
 				5D99294922C0D303007BF875 /* AppDelegate.m in Sources */,
 				5DCFC33222C0FA86005CE98D /* Demo5ViewController.m in Sources */,
+				5D858ECB22C46CFC00346833 /* SimpleCustomDemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
