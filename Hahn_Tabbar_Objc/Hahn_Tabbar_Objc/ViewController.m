@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "TabBar/TabBarViewController.h"
 #import "SimpleCustomTabBarViewController.h"
+#import "CustomTabBar/CustomTabBarViewController.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -32,7 +33,8 @@
 {
     [super viewDidLoad];
     [self.dataArray addObject:@"普通的tabbar"];
-    [self.dataArray addObject:@"图片运动和自定义点击的tabbar"];
+    [self.dataArray addObject:@"简单加号按钮的tabbar"];
+    [self.dataArray addObject:@"凸起来的加号按钮tabbar"];
 }
 
 # pragma mark - UITableViewDelegate 、UITableViewDataSource
@@ -60,10 +62,15 @@
     {
         [self presentViewController:[TabBarViewController new] animated:YES completion:nil];
     }
-    // 自定义的tabbar
+    // 系统自定义的tabbar
     else if (indexPath.row == 1)
     {
         [self presentViewController:[SimpleCustomTabBarViewController new] animated:YES completion:nil];
+    }
+    // 自定义的tabbar
+    else if (indexPath.row == 2)
+    {
+        [self presentViewController:[CustomTabBarViewController new] animated:YES completion:nil];
     }
 }
 
