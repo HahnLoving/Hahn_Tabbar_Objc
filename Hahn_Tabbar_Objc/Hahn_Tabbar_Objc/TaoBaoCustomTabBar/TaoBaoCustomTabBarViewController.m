@@ -6,28 +6,28 @@
 //  Copyright © 2019 Hahn. All rights reserved.
 //
 
-#import "CustomTabBarViewController.h"
+#import "TaoBaoCustomTabBarViewController.h"
 #import "Demo1ViewController.h"
 #import "Demo2ViewController.h"
 #import "Demo3ViewController.h"
 #import "Demo4ViewController.h"
 #import "Demo5ViewController.h"
 #import "SimpleCustomDemoViewController.h"
-#import "CustomTabBar.h"
+#import "TaoBaoCustomTabBar.h"
 
-@interface CustomTabBarViewController ()<UITabBarControllerDelegate, CustomTabBarDelegate>
+@interface TaoBaoCustomTabBarViewController ()<UITabBarControllerDelegate, TaoBaoCustomTabBarDelegate>
 
-@property (strong, nonatomic) CustomTabBar *customTabBar;
+@property (strong, nonatomic) TaoBaoCustomTabBar *customTabBar;
 
 @end
 
-@implementation CustomTabBarViewController
+@implementation TaoBaoCustomTabBarViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-    CustomTabBar *tabBar = [[CustomTabBar alloc] init];
+    TaoBaoCustomTabBar *tabBar = [[TaoBaoCustomTabBar alloc] init];
     //取消tabBar的透明效果
     tabBar.translucent = NO;
     // 设置tabBar的代理
@@ -37,6 +37,7 @@
     self.customTabBar = tabBar;
     
     [self tabBarControllerAddChildViewController];
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -48,10 +49,10 @@
 - (void)tabBarControllerAddChildViewController
 {
     NSArray *classControllers = [NSArray array];
-    classControllers = @[@"Demo1ViewController", @"Demo2ViewController", @"Demo4ViewController", @"Demo5ViewController"];
-    NSArray *titles = @[@"首页", @"附近", @"聊天", @"我的"];
-    NSArray *normalImages = @[@"home_normal", @"mycity_normal", @"message_normal", @"account_normal"];
-    NSArray *selectImages = @[@"home_highlight", @"mycity_highlight", @"message_highlight", @"account_highlight"];
+    classControllers = @[@"Demo1ViewController", @"Demo2ViewController",@"Demo3ViewController" ,@"Demo4ViewController", @"Demo5ViewController"];
+    NSArray *titles = @[@"", @"首页", @"附近", @"聊天", @"我的"];
+    NSArray *normalImages = @[@"", @"home_normal", @"mycity_normal", @"message_normal", @"account_normal"];
+    NSArray *selectImages = @[@"", @"home_highlight", @"mycity_highlight", @"message_highlight", @"account_highlight"];
     
     [self TabbarControllerAddSubViewsControllers:classControllers addTitleArray:titles addNormalImagesArray:normalImages addSelectImageArray:selectImages];
 }
@@ -88,31 +89,29 @@
 /**
  *  点击了加号按钮
  */
-- (void)tabBarDidClickPlusButton:(CustomTabBar *)tabBar
+- (void)tabBarDidClickPlusButton:(TaoBaoCustomTabBar *)tabBar
 {
-    /**
-     definesPresentationContext这一属性决定了那个父控制器的View，
-     将会以优先于UIModalPresentationCurrentContext这种呈现方式来展现自己的View。
-     如果没有父控制器设置这一属性，那么展示的控制器将会是根视图控制器
-     
-     modalPresentationStyle可以设置模态是否隐藏
-     
-     */
-    
     tabBar.plusButton.selected = YES;
-    
-    SimpleCustomDemoViewController *vc = [SimpleCustomDemoViewController new];
-    self.definesPresentationContext = YES;
-    vc.view.backgroundColor = [UIColor clearColor];
-    vc.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-    [self presentViewController:vc animated:YES completion:nil];
+    self.selectedIndex =0;
+    self.customTabBar.plusButton.hidden = YES;
 }
 
 # pragma mark - UITabBarControllerDelegate
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
 {
-    self.customTabBar.plusButton.selected = NO;
-    return YES;
+    if (viewController.tabBarItem.tag == 0) {
+        self.customTabBar.plusButton.selected = NO;
+        self.customTabBar.plusButton.hidden = NO;
+        self.viewControllers[0].tabBarItem.image = [[UIImage imageNamed:@""] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        self.viewControllers[0].tabBarItem.title = @"";
+
+        return YES;
+    }else{
+        self.customTabBar.plusButton.hidden = YES;
+        self.viewControllers[0].tabBarItem.image = [[UIImage imageNamed:@"home_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        self.viewControllers[0].tabBarItem.title = @"首页";
+        return YES;
+    }
 }
 
 @end

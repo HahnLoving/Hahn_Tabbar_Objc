@@ -10,6 +10,8 @@
 		5D858ECB22C46CFC00346833 /* SimpleCustomDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D858EC922C46CFC00346833 /* SimpleCustomDemoViewController.m */; };
 		5D858FB022C5EFE100346833 /* CustomTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D858FAE22C5EFE100346833 /* CustomTabBarViewController.m */; };
 		5D858FC622C5FE2100346833 /* CustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D858FC522C5FE2100346833 /* CustomTabBar.m */; };
+		5D85900D22C7487000346833 /* TaoBaoCustomTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D85900B22C7487000346833 /* TaoBaoCustomTabBarViewController.m */; };
+		5D85900E22C7487000346833 /* TaoBaoCustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D85900C22C7487000346833 /* TaoBaoCustomTabBar.m */; };
 		5D99294922C0D303007BF875 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D99294822C0D303007BF875 /* AppDelegate.m */; };
 		5D99294C22C0D303007BF875 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D99294B22C0D303007BF875 /* ViewController.m */; };
 		5D99294F22C0D303007BF875 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D99294D22C0D303007BF875 /* Main.storyboard */; };
@@ -50,7 +52,11 @@
 		5D858FAD22C5EFE100346833 /* CustomTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTabBarViewController.h; sourceTree = "<group>"; };
 		5D858FAE22C5EFE100346833 /* CustomTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarViewController.m; sourceTree = "<group>"; };
 		5D858FC422C5FE2100346833 /* CustomTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTabBar.h; sourceTree = "<group>"; };
-		5D858FC522C5FE2100346833 /* CustomTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTabBar.m; sourceTree = "<group>"; };
+		5D858FC522C5FE2100346833 /* CustomTabBar.m */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.c.objc; path = CustomTabBar.m; sourceTree = "<group>"; };
+		5D85900922C7486F00346833 /* TaoBaoCustomTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaoBaoCustomTabBar.h; sourceTree = "<group>"; };
+		5D85900A22C7486F00346833 /* TaoBaoCustomTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaoBaoCustomTabBarViewController.h; sourceTree = "<group>"; };
+		5D85900B22C7487000346833 /* TaoBaoCustomTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaoBaoCustomTabBarViewController.m; sourceTree = "<group>"; };
+		5D85900C22C7487000346833 /* TaoBaoCustomTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaoBaoCustomTabBar.m; sourceTree = "<group>"; };
 		5D99294422C0D303007BF875 /* Hahn_Tabbar_Objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hahn_Tabbar_Objc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D99294722C0D303007BF875 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5D99294822C0D303007BF875 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -119,6 +125,17 @@
 			path = CustomTabBar;
 			sourceTree = "<group>";
 		};
+		5D85900822C7481D00346833 /* TaoBaoCustomTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				5D85900922C7486F00346833 /* TaoBaoCustomTabBar.h */,
+				5D85900C22C7487000346833 /* TaoBaoCustomTabBar.m */,
+				5D85900A22C7486F00346833 /* TaoBaoCustomTabBarViewController.h */,
+				5D85900B22C7487000346833 /* TaoBaoCustomTabBarViewController.m */,
+			);
+			path = TaoBaoCustomTabBar;
+			sourceTree = "<group>";
+		};
 		5D99293B22C0D303007BF875 = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +163,7 @@
 				5D99297922C0F6F2007BF875 /* TabBar */,
 				5DCFC33322C1010D005CE98D /* SimpleCustomTabBar */,
 				5D858FAC22C5EFBB00346833 /* CustomTabBar */,
+				5D85900822C7481D00346833 /* TaoBaoCustomTabBar */,
 				5D99294722C0D303007BF875 /* AppDelegate.h */,
 				5D99294822C0D303007BF875 /* AppDelegate.m */,
 				5D99294A22C0D303007BF875 /* ViewController.h */,
@@ -346,6 +364,7 @@
 			files = (
 				5DCFC32F22C0FA56005CE98D /* Demo4ViewController.m in Sources */,
 				5D858FB022C5EFE100346833 /* CustomTabBarViewController.m in Sources */,
+				5D85900E22C7487000346833 /* TaoBaoCustomTabBar.m in Sources */,
 				5DCFC32922C0FA00005CE98D /* Demo2ViewController.m in Sources */,
 				5DCFC31F22C0F895005CE98D /* TabBarViewController.m in Sources */,
 				5D99294C22C0D303007BF875 /* ViewController.m in Sources */,
@@ -353,6 +372,7 @@
 				5DCFC33722C1014C005CE98D /* SimpleCustomTabBarViewController.m in Sources */,
 				5D99295722C0D303007BF875 /* main.m in Sources */,
 				5DCFC32C22C0FA20005CE98D /* Demo3ViewController.m in Sources */,
+				5D85900D22C7487000346833 /* TaoBaoCustomTabBarViewController.m in Sources */,
 				5D99294922C0D303007BF875 /* AppDelegate.m in Sources */,
 				5DCFC33222C0FA86005CE98D /* Demo5ViewController.m in Sources */,
 				5D858FC622C5FE2100346833 /* CustomTabBar.m in Sources */,

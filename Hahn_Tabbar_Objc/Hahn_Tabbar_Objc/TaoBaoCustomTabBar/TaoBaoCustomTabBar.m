@@ -6,34 +6,23 @@
 //  Copyright © 2019 Hahn. All rights reserved.
 //
 
-#import "CustomTabBar.h"
+#import "TaoBaoCustomTabBar.h"
 
-@interface CustomTabBar ()
+@interface TaoBaoCustomTabBar ()
 
 @end
 
-@implementation CustomTabBar
+@implementation TaoBaoCustomTabBar
 
 # pragma mark - 赖加载
 - (UIButton *)plusButton
 {
     if (_plusButton == nil) {
         _plusButton = [[UIButton alloc] init];
-        [_plusButton setImage:[UIImage imageNamed:@"post_normal"] forState:UIControlStateNormal];
-        [_plusButton setImage:[UIImage imageNamed:@"post_normal"] forState:UIControlStateHighlighted];
-       
-        _plusButton.titleLabel.font = [UIFont systemFontOfSize:11];
-        [_plusButton setTitle:@"发布" forState:UIControlStateNormal];
-        [_plusButton setTitle:@"发布" forState:UIControlStateHighlighted];
-        [_plusButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-//        [_plusButton setTitleColor:[UIColor colorWithRed:255.0/255 green:204.0/255 blue:13.0/255 alpha:1] forState:UIControlStateSelected];
-       
-        UIImage *buttonImg = [_plusButton imageForState:UIControlStateNormal];
-        CGFloat titleWidth = [_plusButton.titleLabel.text sizeWithAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont boldSystemFontOfSize:11],NSFontAttributeName, nil]].width;
-        [_plusButton setTitleEdgeInsets:UIEdgeInsetsMake(buttonImg.size.height, -buttonImg.size.width, -15, 0)];
-        [_plusButton setImageEdgeInsets:UIEdgeInsetsMake(-15, 0, 0, -titleWidth)];
+        [_plusButton setImage:[UIImage imageNamed:@"taobao"] forState:UIControlStateNormal];
+        [_plusButton setImage:[UIImage imageNamed:@"taobao"] forState:UIControlStateHighlighted];
         
-        _plusButton.frame = CGRectMake(0, 0, _plusButton.imageView.image.size.width, _plusButton.imageView.image.size.height + 40);
+        _plusButton.frame = CGRectMake(0, 0, _plusButton.imageView.image.size.width + 1, _plusButton.imageView.image.size.height + 1);
         [_plusButton addTarget:self action:@selector(respondsToPlusButton) forControlEvents:UIControlEventTouchUpInside];
     }
     return _plusButton;
@@ -62,7 +51,7 @@
 {
     [super layoutSubviews];
     // 设置中间按钮的位置
-    self.plusButton.center = CGPointMake(CGRectGetWidth(self.frame) * 0.5, CGRectGetHeight(self.frame) * 0.1);
+//    self.plusButton.center = CGPointMake(CGRectGetWidth(self.frame) * 0.5, CGRectGetHeight(self.frame) * 0.1);
     
     // 设置其他的按钮的位置
     CGFloat w = CGRectGetWidth(self.frame) / 5;
@@ -70,14 +59,12 @@
     for (UIView *childView in self.subviews) {
         Class class = NSClassFromString(@"UITabBarButton");
         if ([childView isKindOfClass:class]) {
-            childView.frame = CGRectMake(w * index, CGRectGetMinY(childView.frame), w, CGRectGetHeight(childView.frame));
-            
-            // 增加索引 要和中间的控件隔开
-            index ++;
-            if (index == 2) {
-                index ++;
+            if (index == 0) {
+                UIView *thisView = [[UIView alloc] initWithFrame:CGRectMake(w * index, CGRectGetMinY(childView.frame), w, CGRectGetHeight(childView.frame))];
+                self.plusButton.center = CGPointMake(CGRectGetWidth(thisView.frame) * 0.5, CGRectGetHeight(thisView.frame) * 0.5);
             }
-            
+//            index ++;
+//            childView.frame = CGRectMake(w * index, CGRectGetMinY(childView.frame), w, CGRectGetHeight(childView.frame));
         }
     }
 }

@@ -10,6 +10,7 @@
 #import "TabBar/TabBarViewController.h"
 #import "SimpleCustomTabBarViewController.h"
 #import "CustomTabBar/CustomTabBarViewController.h"
+#import "TaoBaoCustomTabBarViewController.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -35,6 +36,7 @@
     [self.dataArray addObject:@"普通的tabbar"];
     [self.dataArray addObject:@"简单加号按钮的tabbar"];
     [self.dataArray addObject:@"凸起来的加号按钮tabbar"];
+    [self.dataArray addObject:@"淘宝按钮tabbar"];
 }
 
 # pragma mark - UITableViewDelegate 、UITableViewDataSource
@@ -62,15 +64,20 @@
     {
         [self presentViewController:[TabBarViewController new] animated:YES completion:nil];
     }
-    // 系统自定义的tabbar
+    // 简单加号按钮的tabbar
     else if (indexPath.row == 1)
     {
         [self presentViewController:[SimpleCustomTabBarViewController new] animated:YES completion:nil];
     }
-    // 自定义的tabbar
+    // 凸起来的加号按钮tabbar
     else if (indexPath.row == 2)
     {
         [self presentViewController:[CustomTabBarViewController new] animated:YES completion:nil];
+    }
+    // 淘宝按钮tabbar
+    else if (indexPath.row == 3)
+    {
+        [self presentViewController:[TaoBaoCustomTabBarViewController new] animated:YES completion:nil];
     }
 }
 
