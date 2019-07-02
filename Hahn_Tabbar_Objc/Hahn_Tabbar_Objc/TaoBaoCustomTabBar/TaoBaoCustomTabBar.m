@@ -28,7 +28,7 @@
     return _plusButton;
 }
 
-# pragma mark - CustomTabBarDelegate
+# pragma mark - TaoBaoCustomTabBarDelegate
 - (void)respondsToPlusButton
 {
     if ([self.delegate respondsToSelector:@selector(tabBarDidClickPlusButton:)]) {
@@ -50,10 +50,8 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    // 设置中间按钮的位置
-//    self.plusButton.center = CGPointMake(CGRectGetWidth(self.frame) * 0.5, CGRectGetHeight(self.frame) * 0.1);
-    
-    // 设置其他的按钮的位置
+
+    // 设置淘宝按钮的位置
     CGFloat w = CGRectGetWidth(self.frame) / 5;
     CGFloat index = 0;
     for (UIView *childView in self.subviews) {
@@ -63,8 +61,6 @@
                 UIView *thisView = [[UIView alloc] initWithFrame:CGRectMake(w * index, CGRectGetMinY(childView.frame), w, CGRectGetHeight(childView.frame))];
                 self.plusButton.center = CGPointMake(CGRectGetWidth(thisView.frame) * 0.5, CGRectGetHeight(thisView.frame) * 0.5);
             }
-//            index ++;
-//            childView.frame = CGRectMake(w * index, CGRectGetMinY(childView.frame), w, CGRectGetHeight(childView.frame));
         }
     }
 }

@@ -85,13 +85,12 @@
     self.delegate = self;
 }
 
-#pragma TaoBaoCustomTabBar
+#pragma TaoBaoCustomTabBarDelegate
 /**
- *  点击了加号按钮
+ *  点击了淘宝按钮
  */
 - (void)tabBarDidClickPlusButton:(TaoBaoCustomTabBar *)tabBar
 {
-    tabBar.plusButton.selected = YES;
     self.selectedIndex =0;
     self.customTabBar.plusButton.hidden = YES;
 }
