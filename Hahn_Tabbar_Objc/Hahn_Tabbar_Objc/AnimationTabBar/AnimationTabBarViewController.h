@@ -1,8 +1,8 @@
 //
-//  TaoBaoCustomTabBarViewController.h
+//  AnimationTabBarViewController.h
 //  Hahn_Tabbar_Objc
 //
-//  Created by Hahn on 2019/6/28.
+//  Created by Hahn on 2019/7/3.
 //  Copyright © 2019 Hahn. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TaoBaoCustomTabBarViewController : UITabBarController
+@interface AnimationTabBarViewController : UITabBarController
 
 @end
 

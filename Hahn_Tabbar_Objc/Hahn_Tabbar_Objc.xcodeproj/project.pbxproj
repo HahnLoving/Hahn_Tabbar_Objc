@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D18CE6D22CC7F5A004A10AF /* AnimationTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D18CE6C22CC7F5A004A10AF /* AnimationTabBarViewController.m */; };
+		5D18CE6F22CC81BC004A10AF /* music.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5D18CE6E22CC81BC004A10AF /* music.wav */; };
 		5D858ECB22C46CFC00346833 /* SimpleCustomDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D858EC922C46CFC00346833 /* SimpleCustomDemoViewController.m */; };
 		5D858FB022C5EFE100346833 /* CustomTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D858FAE22C5EFE100346833 /* CustomTabBarViewController.m */; };
 		5D858FC622C5FE2100346833 /* CustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D858FC522C5FE2100346833 /* CustomTabBar.m */; };
@@ -47,6 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5D18CE6B22CC7F5A004A10AF /* AnimationTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationTabBarViewController.h; sourceTree = "<group>"; };
+		5D18CE6C22CC7F5A004A10AF /* AnimationTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationTabBarViewController.m; sourceTree = "<group>"; };
+		5D18CE6E22CC81BC004A10AF /* music.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = music.wav; sourceTree = "<group>"; };
 		5D858EC822C46CFC00346833 /* SimpleCustomDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleCustomDemoViewController.h; sourceTree = "<group>"; };
 		5D858EC922C46CFC00346833 /* SimpleCustomDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleCustomDemoViewController.m; sourceTree = "<group>"; };
 		5D858FAD22C5EFE100346833 /* CustomTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTabBarViewController.h; sourceTree = "<group>"; };
@@ -114,6 +119,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D18CE6A22CC7F34004A10AF /* AnimationTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				5D18CE6B22CC7F5A004A10AF /* AnimationTabBarViewController.h */,
+				5D18CE6C22CC7F5A004A10AF /* AnimationTabBarViewController.m */,
+			);
+			path = AnimationTabBar;
+			sourceTree = "<group>";
+		};
 		5D858FAC22C5EFBB00346833 /* CustomTabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,11 +178,13 @@
 				5DCFC33322C1010D005CE98D /* SimpleCustomTabBar */,
 				5D858FAC22C5EFBB00346833 /* CustomTabBar */,
 				5D85900822C7481D00346833 /* TaoBaoCustomTabBar */,
+				5D18CE6A22CC7F34004A10AF /* AnimationTabBar */,
 				5D99294722C0D303007BF875 /* AppDelegate.h */,
 				5D99294822C0D303007BF875 /* AppDelegate.m */,
 				5D99294A22C0D303007BF875 /* ViewController.h */,
 				5D99294B22C0D303007BF875 /* ViewController.m */,
 				5D99294D22C0D303007BF875 /* Main.storyboard */,
+				5D18CE6E22CC81BC004A10AF /* music.wav */,
 				5D99295022C0D303007BF875 /* Assets.xcassets */,
 				5D99295222C0D303007BF875 /* LaunchScreen.storyboard */,
 				5D99295522C0D303007BF875 /* Info.plist */,
@@ -337,6 +353,7 @@
 			files = (
 				5D99295422C0D303007BF875 /* LaunchScreen.storyboard in Resources */,
 				5D99295122C0D303007BF875 /* Assets.xcassets in Resources */,
+				5D18CE6F22CC81BC004A10AF /* music.wav in Resources */,
 				5D99294F22C0D303007BF875 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +384,7 @@
 				5D85900E22C7487000346833 /* TaoBaoCustomTabBar.m in Sources */,
 				5DCFC32922C0FA00005CE98D /* Demo2ViewController.m in Sources */,
 				5DCFC31F22C0F895005CE98D /* TabBarViewController.m in Sources */,
+				5D18CE6D22CC7F5A004A10AF /* AnimationTabBarViewController.m in Sources */,
 				5D99294C22C0D303007BF875 /* ViewController.m in Sources */,
 				5DCFC32622C0F9DB005CE98D /* Demo1ViewController.m in Sources */,
 				5DCFC33722C1014C005CE98D /* SimpleCustomTabBarViewController.m in Sources */,
