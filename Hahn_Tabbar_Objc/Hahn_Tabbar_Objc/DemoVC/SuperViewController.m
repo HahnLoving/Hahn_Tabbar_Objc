@@ -29,8 +29,9 @@
 
 // 得到监听值
 - (void)isAnimation:(NSNotification *)notification{
-    NSNumber *num = [notification object];
-    if (num == @0) {
+    NSNumber *number = [notification object];
+    int num = [number intValue];
+    if (num == 0) {
         self.tabBarController.tabBar.frame = CGRectMake(self.tabBarController.tabBar.frame.origin.x, self.tabBarController.tabBar.frame.origin.y + self.tabBarController.tabBar.frame.size.height, self.tabBarController.tabBar.frame.size.width, self.tabBarController.tabBar.frame.size.height);
     }else{
         [UIView animateWithDuration:0.5 animations:^{
