@@ -25,6 +25,7 @@
     [backBtn setTitle:@"Back" forState:UIControlStateNormal];
     [backBtn addTarget:self action:@selector(backBtn) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:backBtn];
+    
 }
 
 # pragma mark - 返回按钮

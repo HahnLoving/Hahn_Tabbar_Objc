@@ -30,6 +30,7 @@
     self.customIndex = 2;
     
     [self tabBarControllerAddChildViewController];
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{

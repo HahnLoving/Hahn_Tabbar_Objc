@@ -12,6 +12,7 @@
 #import "CustomTabBar/CustomTabBarViewController.h"
 #import "TaoBaoCustomTabBarViewController.h"
 #import "AnimationTabBarViewController.h"
+#import "JDAnimationTabBarViewController.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -39,6 +40,7 @@
     [self.dataArray addObject:@"凸起来的加号按钮tabbar"];
     [self.dataArray addObject:@"淘宝按钮tabbar"];
     [self.dataArray addObject:@"动画音效按钮tabbar"];
+    [self.dataArray addObject:@"京东起弹Tabbar"];
 }
 
 # pragma mark - UITableViewDelegate 、UITableViewDataSource
@@ -82,8 +84,14 @@
         [self presentViewController:[TaoBaoCustomTabBarViewController new] animated:YES completion:nil];
     }
     // 动画按钮tabbar
+    else if (indexPath.row == 4)
     {
         [self presentViewController:[AnimationTabBarViewController new] animated:YES completion:nil];
+    }
+    // 京东tabbar
+    else if (indexPath.row == 5)
+    {
+        [self presentViewController:[JDAnimationTabBarViewController new] animated:YES completion:nil];
     }
 }
 

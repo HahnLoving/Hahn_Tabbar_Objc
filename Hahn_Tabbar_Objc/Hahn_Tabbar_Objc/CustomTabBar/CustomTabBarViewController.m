@@ -37,6 +37,7 @@
     self.customTabBar = tabBar;
     
     [self tabBarControllerAddChildViewController];
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{

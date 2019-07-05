@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SuperViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Demo1ViewController : UIViewController
+@interface Demo1ViewController : SuperViewController
 
 @end
 
