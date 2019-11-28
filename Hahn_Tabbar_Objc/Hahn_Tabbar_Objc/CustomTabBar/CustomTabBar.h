@@ -20,12 +20,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+/**
+ *Demo
+ */
+typedef void(^CustomTabBarBlock)(NSMutableDictionary* dict);
+
 
 @interface CustomTabBar : UITabBar
 
 @property (nonatomic, strong) UIButton *plusButton;
 
 @property (nonatomic, weak) id<CustomTabBarDelegate> myDelegate;
+
+// demo
+@property (nonatomic, strong) CustomTabBarBlock block;
 
 @end
 

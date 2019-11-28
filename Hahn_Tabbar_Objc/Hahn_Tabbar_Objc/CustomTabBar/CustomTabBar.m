@@ -61,6 +61,11 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
+   
+   NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+   [dict setValue:@"hzl" forKey:@"name"];
+   self.block(dict);
+   
     // 设置中间按钮的位置
     self.plusButton.center = CGPointMake(CGRectGetWidth(self.frame) * 0.5, CGRectGetHeight(self.frame) * 0.1);
     

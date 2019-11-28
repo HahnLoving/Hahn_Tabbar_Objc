@@ -66,32 +66,65 @@
     // 普通的tabbar
     if (indexPath.row == 0)
     {
-        [self presentViewController:[TabBarViewController new] animated:YES completion:nil];
+        TabBarViewController *vc = [TabBarViewController new];
+        if (@available(iOS 13, *)) {
+            vc.modalPresentationStyle = UIModalPresentationFullScreen;
+        }
+        [self presentViewController:vc animated:YES completion:nil];
+        
     }
     // 简单加号按钮的tabbar
     else if (indexPath.row == 1)
     {
-        [self presentViewController:[SimpleCustomTabBarViewController new] animated:YES completion:nil];
+        
+        SimpleCustomTabBarViewController *vc = [SimpleCustomTabBarViewController new];
+        if (@available(iOS 13, *)) {
+            vc.modalPresentationStyle = UIModalPresentationFullScreen;
+        }
+        [self presentViewController:vc animated:YES completion:nil];
+        
     }
     // 凸起来的加号按钮tabbar
     else if (indexPath.row == 2)
     {
-        [self presentViewController:[CustomTabBarViewController new] animated:YES completion:nil];
+        CustomTabBarViewController *vc = [CustomTabBarViewController new];
+        if (@available(iOS 13, *)) {
+            vc.modalPresentationStyle = UIModalPresentationFullScreen;
+        }
+        [self presentViewController:vc animated:YES completion:nil];
     }
     // 淘宝按钮tabbar
     else if (indexPath.row == 3)
     {
-        [self presentViewController:[TaoBaoCustomTabBarViewController new] animated:YES completion:nil];
+        
+        TaoBaoCustomTabBarViewController *vc = [TaoBaoCustomTabBarViewController new];
+        if (@available(iOS 13, *)) {
+            vc.modalPresentationStyle = UIModalPresentationFullScreen;
+        }
+        [self presentViewController:vc animated:YES completion:nil];
+        
     }
     // 动画按钮tabbar
     else if (indexPath.row == 4)
     {
-        [self presentViewController:[AnimationTabBarViewController new] animated:YES completion:nil];
+        
+        AnimationTabBarViewController *vc = [AnimationTabBarViewController new];
+        if (@available(iOS 13, *)) {
+            vc.modalPresentationStyle = UIModalPresentationFullScreen;
+        }
+        [self presentViewController:vc animated:YES completion:nil];
+        
     }
     // 京东tabbar
     else if (indexPath.row == 5)
     {
-        [self presentViewController:[JDAnimationTabBarViewController new] animated:YES completion:nil];
+        
+        JDAnimationTabBarViewController *vc = [JDAnimationTabBarViewController new];
+        if (@available(iOS 13, *)) {
+            vc.modalPresentationStyle = UIModalPresentationFullScreen;
+        }
+        [self presentViewController:vc animated:YES completion:nil];
+        
     }
 }
 

@@ -27,6 +27,12 @@
     [self.view addSubview:button];
     [button setBackgroundColor:[UIColor redColor]];
     [button addTarget:self action:@selector(backBtn) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIScreenEdgePanGestureRecognizer *edgeGes = [[UIScreenEdgePanGestureRecognizer alloc]  initWithTarget: self  action:@selector(backBtn)];
+    edgeGes.edges = UIRectEdgeLeft;
+    [self.view addGestureRecognizer:edgeGes];
+
+
 }
 
 # pragma mark - 返回按钮

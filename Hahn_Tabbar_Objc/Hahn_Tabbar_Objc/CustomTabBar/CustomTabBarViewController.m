@@ -35,6 +35,9 @@
     // KVC：如果要修系统的某些属性，但被设为readOnly，就是用KVC，即setValue：forKey：。
     [self setValue:tabBar forKey:@"tabBar"];
     self.customTabBar = tabBar;
+    self.customTabBar.block = ^(NSMutableDictionary * _Nonnull dict) {
+        NSLog(@"block = %@",dict);
+    };
     
     [self tabBarControllerAddChildViewController];
     
