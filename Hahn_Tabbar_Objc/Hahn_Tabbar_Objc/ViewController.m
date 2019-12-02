@@ -41,6 +41,7 @@
     [self.dataArray addObject:@"淘宝按钮tabbar"];
     [self.dataArray addObject:@"动画音效按钮tabbar"];
     [self.dataArray addObject:@"京东起弹Tabbar"];
+    [self.dataArray addObject:@"自定义小红点Tabbar"];
 }
 
 # pragma mark - UITableViewDelegate 、UITableViewDataSource
@@ -67,6 +68,7 @@
     if (indexPath.row == 0)
     {
         TabBarViewController *vc = [TabBarViewController new];
+        vc.isBadge = NO;
         if (@available(iOS 13, *)) {
             vc.modalPresentationStyle = UIModalPresentationFullScreen;
         }
@@ -120,6 +122,17 @@
     {
         
         JDAnimationTabBarViewController *vc = [JDAnimationTabBarViewController new];
+        if (@available(iOS 13, *)) {
+            vc.modalPresentationStyle = UIModalPresentationFullScreen;
+        }
+        [self presentViewController:vc animated:YES completion:nil];
+        
+    }
+    // 自定义小红点tabbar
+    else if (indexPath.row == 6)
+    {
+        TabBarViewController *vc = [TabBarViewController new];
+        vc.isBadge = YES;
         if (@available(iOS 13, *)) {
             vc.modalPresentationStyle = UIModalPresentationFullScreen;
         }

@@ -22,24 +22,34 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self tabBarControllerAddChildViewController];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = YES;
+    [self tabBarControllerAddChildViewController];
 }
 
 # pragma mark - 添加子类的数据
 - (void)tabBarControllerAddChildViewController
 {
     NSArray *classControllers = [NSArray array];
-    classControllers = @[@"Demo1ViewController", @"Demo2ViewController", @"Demo3ViewController", @"Demo4ViewController", @"Demo5ViewController"];
-    NSArray *titles = @[@"首页", @"附近", @"发布", @"聊天", @"我的"];
-    NSArray *normalImages = @[@"home_normal", @"mycity_normal", @"mycity_normal", @"message_normal", @"account_normal"];
-    NSArray *selectImages = @[@"home_highlight", @"mycity_highlight", @"mycity_normal", @"message_highlight", @"account_highlight"];
     
-    [self TabbarControllerAddSubViewsControllers:classControllers addTitleArray:titles addNormalImagesArray:normalImages addSelectImageArray:selectImages];
+    if (self.isBadge) {
+        classControllers = @[@"BadgeViewController", @"Demo2ViewController", @"Demo3ViewController", @"Demo4ViewController", @"Demo5ViewController"];
+        NSArray *titles = @[@"首页", @"附近", @"发布", @"聊天", @"我的"];
+        NSArray *normalImages = @[@"home_normal", @"mycity_normal", @"mycity_normal", @"message_normal", @"account_normal"];
+        NSArray *selectImages = @[@"home_highlight", @"mycity_highlight", @"mycity_normal", @"message_highlight", @"account_highlight"];
+        [self TabbarControllerAddSubViewsControllers:classControllers addTitleArray:titles addNormalImagesArray:normalImages addSelectImageArray:selectImages];
+    }else{
+        classControllers = @[@"Demo1ViewController", @"Demo2ViewController", @"Demo3ViewController", @"Demo4ViewController", @"Demo5ViewController"];
+        NSArray *titles = @[@"首页", @"附近", @"发布", @"聊天", @"我的"];
+        NSArray *normalImages = @[@"home_normal", @"mycity_normal", @"mycity_normal", @"message_normal", @"account_normal"];
+        NSArray *selectImages = @[@"home_highlight", @"mycity_highlight", @"mycity_normal", @"message_highlight", @"account_highlight"];
+        [self TabbarControllerAddSubViewsControllers:classControllers addTitleArray:titles addNormalImagesArray:normalImages addSelectImageArray:selectImages];
+    }
+    
+    
 }
 
 

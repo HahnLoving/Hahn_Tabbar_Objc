@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TabBarViewController : UITabBarController
 
+@property (nonatomic, assign) BOOL isBadge;                                 // true是自定义小红点 false是常规的
+
 @end
 
 NS_ASSUME_NONNULL_END

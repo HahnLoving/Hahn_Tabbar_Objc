@@ -13,6 +13,8 @@
 		5D18CEBC22CF581A004A10AF /* Demo6ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D18CEBB22CF581A004A10AF /* Demo6ViewController.m */; };
 		5D18CEC022CFC85A004A10AF /* JDAnimationTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D18CEBF22CFC85A004A10AF /* JDAnimationTabBarViewController.m */; };
 		5D18CEC322CFC949004A10AF /* Demo7ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D18CEC222CFC949004A10AF /* Demo7ViewController.m */; };
+		5D534C602394D543007784A8 /* UITabBar+HahnBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D534C5F2394D543007784A8 /* UITabBar+HahnBadge.m */; };
+		5D534C632394DFB6007784A8 /* BadgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D534C622394DFB6007784A8 /* BadgeViewController.m */; };
 		5D858ECB22C46CFC00346833 /* SimpleCustomDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D858EC922C46CFC00346833 /* SimpleCustomDemoViewController.m */; };
 		5D858FB022C5EFE100346833 /* CustomTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D858FAE22C5EFE100346833 /* CustomTabBarViewController.m */; };
 		5D858FC622C5FE2100346833 /* CustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D858FC522C5FE2100346833 /* CustomTabBar.m */; };
@@ -64,6 +66,10 @@
 		5D18CEBF22CFC85A004A10AF /* JDAnimationTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JDAnimationTabBarViewController.m; sourceTree = "<group>"; };
 		5D18CEC122CFC949004A10AF /* Demo7ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo7ViewController.h; sourceTree = "<group>"; };
 		5D18CEC222CFC949004A10AF /* Demo7ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo7ViewController.m; sourceTree = "<group>"; };
+		5D534C5E2394D543007784A8 /* UITabBar+HahnBadge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITabBar+HahnBadge.h"; sourceTree = "<group>"; };
+		5D534C5F2394D543007784A8 /* UITabBar+HahnBadge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+HahnBadge.m"; sourceTree = "<group>"; };
+		5D534C612394DFB6007784A8 /* BadgeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BadgeViewController.h; sourceTree = "<group>"; };
+		5D534C622394DFB6007784A8 /* BadgeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BadgeViewController.m; sourceTree = "<group>"; };
 		5D858EC822C46CFC00346833 /* SimpleCustomDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleCustomDemoViewController.h; sourceTree = "<group>"; };
 		5D858EC922C46CFC00346833 /* SimpleCustomDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleCustomDemoViewController.m; sourceTree = "<group>"; };
 		5D858FAD22C5EFE100346833 /* CustomTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTabBarViewController.h; sourceTree = "<group>"; };
@@ -149,6 +155,15 @@
 			path = JDAnimationTabBar;
 			sourceTree = "<group>";
 		};
+		5D534C5D2394C30E007784A8 /* UITabBar+Badge */ = {
+			isa = PBXGroup;
+			children = (
+				5D534C5E2394D543007784A8 /* UITabBar+HahnBadge.h */,
+				5D534C5F2394D543007784A8 /* UITabBar+HahnBadge.m */,
+			);
+			path = "UITabBar+Badge";
+			sourceTree = "<group>";
+		};
 		5D858FAC22C5EFBB00346833 /* CustomTabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +209,7 @@
 		5D99294622C0D303007BF875 /* Hahn_Tabbar_Objc */ = {
 			isa = PBXGroup;
 			children = (
+				5D534C5D2394C30E007784A8 /* UITabBar+Badge */,
 				5DCFC32322C0F9B8005CE98D /* DemoVC */,
 				5D99297922C0F6F2007BF875 /* TabBar */,
 				5DCFC33322C1010D005CE98D /* SimpleCustomTabBar */,
@@ -261,6 +277,8 @@
 				5D18CEBB22CF581A004A10AF /* Demo6ViewController.m */,
 				5D18CEC122CFC949004A10AF /* Demo7ViewController.h */,
 				5D18CEC222CFC949004A10AF /* Demo7ViewController.m */,
+				5D534C612394DFB6007784A8 /* BadgeViewController.h */,
+				5D534C622394DFB6007784A8 /* BadgeViewController.m */,
 			);
 			path = DemoVC;
 			sourceTree = "<group>";
@@ -407,6 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D534C602394D543007784A8 /* UITabBar+HahnBadge.m in Sources */,
 				5DCFC32F22C0FA56005CE98D /* Demo4ViewController.m in Sources */,
 				5D858FB022C5EFE100346833 /* CustomTabBarViewController.m in Sources */,
 				5D85900E22C7487000346833 /* TaoBaoCustomTabBar.m in Sources */,
@@ -414,6 +433,7 @@
 				5DCFC31F22C0F895005CE98D /* TabBarViewController.m in Sources */,
 				5D18CE6D22CC7F5A004A10AF /* AnimationTabBarViewController.m in Sources */,
 				5D99294C22C0D303007BF875 /* ViewController.m in Sources */,
+				5D534C632394DFB6007784A8 /* BadgeViewController.m in Sources */,
 				5D18CEC322CFC949004A10AF /* Demo7ViewController.m in Sources */,
 				5DCFC32622C0F9DB005CE98D /* Demo1ViewController.m in Sources */,
 				5DCFC33722C1014C005CE98D /* SimpleCustomTabBarViewController.m in Sources */,
