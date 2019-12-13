@@ -13,6 +13,7 @@
 #import "TaoBaoCustomTabBarViewController.h"
 #import "AnimationTabBarViewController.h"
 #import "JDAnimationTabBarViewController.h"
+#import "SlidingViewController.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -41,6 +42,7 @@
     [self.dataArray addObject:@"淘宝按钮tabbar"];
     [self.dataArray addObject:@"动画音效按钮tabbar"];
     [self.dataArray addObject:@"京东起弹Tabbar"];
+    [self.dataArray addObject:@"滑动隐藏Tabbar"];
     [self.dataArray addObject:@"自定义小红点Tabbar"];
 }
 
@@ -128,8 +130,19 @@
         [self presentViewController:vc animated:YES completion:nil];
         
     }
-    // 自定义小红点tabbar
+    // 滑动隐藏Tabbar
     else if (indexPath.row == 6)
+    {
+        
+        SlidingViewController *vc = [SlidingViewController new];
+        if (@available(iOS 13, *)) {
+            vc.modalPresentationStyle = UIModalPresentationFullScreen;
+        }
+        [self presentViewController:vc animated:YES completion:nil];
+        
+    }
+    // 自定义小红点tabbar
+    else if (indexPath.row == 7)
     {
         TabBarViewController *vc = [TabBarViewController new];
         vc.isBadge = YES;

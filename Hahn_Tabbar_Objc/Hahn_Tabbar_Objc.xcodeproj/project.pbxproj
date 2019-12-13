@@ -15,6 +15,8 @@
 		5D18CEC322CFC949004A10AF /* Demo7ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D18CEC222CFC949004A10AF /* Demo7ViewController.m */; };
 		5D534C602394D543007784A8 /* UITabBar+HahnBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D534C5F2394D543007784A8 /* UITabBar+HahnBadge.m */; };
 		5D534C632394DFB6007784A8 /* BadgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D534C622394DFB6007784A8 /* BadgeViewController.m */; };
+		5D6C791123A328F200FB5865 /* SlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6C791023A328F200FB5865 /* SlidingViewController.m */; };
+		5D6C791723A32D1E00FB5865 /* Demo8ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6C791623A32D1E00FB5865 /* Demo8ViewController.m */; };
 		5D858ECB22C46CFC00346833 /* SimpleCustomDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D858EC922C46CFC00346833 /* SimpleCustomDemoViewController.m */; };
 		5D858FB022C5EFE100346833 /* CustomTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D858FAE22C5EFE100346833 /* CustomTabBarViewController.m */; };
 		5D858FC622C5FE2100346833 /* CustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D858FC522C5FE2100346833 /* CustomTabBar.m */; };
@@ -70,6 +72,10 @@
 		5D534C5F2394D543007784A8 /* UITabBar+HahnBadge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+HahnBadge.m"; sourceTree = "<group>"; };
 		5D534C612394DFB6007784A8 /* BadgeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BadgeViewController.h; sourceTree = "<group>"; };
 		5D534C622394DFB6007784A8 /* BadgeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BadgeViewController.m; sourceTree = "<group>"; };
+		5D6C790F23A328F200FB5865 /* SlidingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlidingViewController.h; sourceTree = "<group>"; };
+		5D6C791023A328F200FB5865 /* SlidingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlidingViewController.m; sourceTree = "<group>"; };
+		5D6C791523A32D1E00FB5865 /* Demo8ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo8ViewController.h; sourceTree = "<group>"; };
+		5D6C791623A32D1E00FB5865 /* Demo8ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo8ViewController.m; sourceTree = "<group>"; };
 		5D858EC822C46CFC00346833 /* SimpleCustomDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleCustomDemoViewController.h; sourceTree = "<group>"; };
 		5D858EC922C46CFC00346833 /* SimpleCustomDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleCustomDemoViewController.m; sourceTree = "<group>"; };
 		5D858FAD22C5EFE100346833 /* CustomTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTabBarViewController.h; sourceTree = "<group>"; };
@@ -164,6 +170,15 @@
 			path = "UITabBar+Badge";
 			sourceTree = "<group>";
 		};
+		5D6C790E23A3286C00FB5865 /* SlidingTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				5D6C790F23A328F200FB5865 /* SlidingViewController.h */,
+				5D6C791023A328F200FB5865 /* SlidingViewController.m */,
+			);
+			path = SlidingTabBar;
+			sourceTree = "<group>";
+		};
 		5D858FAC22C5EFBB00346833 /* CustomTabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +232,7 @@
 				5D85900822C7481D00346833 /* TaoBaoCustomTabBar */,
 				5D18CE6A22CC7F34004A10AF /* AnimationTabBar */,
 				5D18CEBD22CFC80E004A10AF /* JDAnimationTabBar */,
+				5D6C790E23A3286C00FB5865 /* SlidingTabBar */,
 				5D99294722C0D303007BF875 /* AppDelegate.h */,
 				5D99294822C0D303007BF875 /* AppDelegate.m */,
 				5D99294A22C0D303007BF875 /* ViewController.h */,
@@ -279,6 +295,8 @@
 				5D18CEC222CFC949004A10AF /* Demo7ViewController.m */,
 				5D534C612394DFB6007784A8 /* BadgeViewController.h */,
 				5D534C622394DFB6007784A8 /* BadgeViewController.m */,
+				5D6C791523A32D1E00FB5865 /* Demo8ViewController.h */,
+				5D6C791623A32D1E00FB5865 /* Demo8ViewController.m */,
 			);
 			path = DemoVC;
 			sourceTree = "<group>";
@@ -437,7 +455,9 @@
 				5D18CEC322CFC949004A10AF /* Demo7ViewController.m in Sources */,
 				5DCFC32622C0F9DB005CE98D /* Demo1ViewController.m in Sources */,
 				5DCFC33722C1014C005CE98D /* SimpleCustomTabBarViewController.m in Sources */,
+				5D6C791723A32D1E00FB5865 /* Demo8ViewController.m in Sources */,
 				5D99295722C0D303007BF875 /* main.m in Sources */,
+				5D6C791123A328F200FB5865 /* SlidingViewController.m in Sources */,
 				5D18CEB922CF522D004A10AF /* SuperViewController.m in Sources */,
 				5DCFC32C22C0FA20005CE98D /* Demo3ViewController.m in Sources */,
 				5D85900D22C7487000346833 /* TaoBaoCustomTabBarViewController.m in Sources */,

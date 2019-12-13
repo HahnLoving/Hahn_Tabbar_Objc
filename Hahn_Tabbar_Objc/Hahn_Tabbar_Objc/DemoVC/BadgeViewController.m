@@ -46,7 +46,7 @@
 //显示小红点
 - (void)showRedPoint
 {
-    CGPoint badgePoint = CGPointMake(25, -3);
+    CGPoint badgePoint = CGPointMake(25, 10);
     self.tabBarController.tabBar.badgePoint = badgePoint;
     self.tabBarController.tabBar.badgeSize = CGSizeMake(20, 20);
     self.tabBarController.tabBar.badgeColor = [UIColor redColor];

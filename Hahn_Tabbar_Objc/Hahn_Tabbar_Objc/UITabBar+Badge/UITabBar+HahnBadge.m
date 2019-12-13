@@ -211,7 +211,7 @@ static char *kBadgeValue = "kBadgeValue";
 }
 
 
-// 获取barButtonView 得到对应的tabbar
+// 获取barButtonView
 - (UIView *)getBarButttonViewWithIndex:(NSUInteger )index
 {
     UIBarButtonItem *item = (UIBarButtonItem *)[self.items  objectAtIndex:index];

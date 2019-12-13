@@ -70,7 +70,8 @@
     self.plusButton.center = CGPointMake(CGRectGetWidth(self.frame) * 0.5, CGRectGetHeight(self.frame) * 0.1);
     
     // 设置其他的按钮的位置
-    CGFloat w = CGRectGetWidth(self.frame) / 5;
+//    CGFloat w = CGRectGetWidth(self.frame) / 5;
+    CGFloat w = CGRectGetWidth(self.frame) / 3;
     CGFloat index = 0;
     for (UIView *childView in self.subviews) {
         Class class = NSClassFromString(@"UITabBarButton");
@@ -79,9 +80,14 @@
             
             // 增加索引 要和中间的控件隔开
             index ++;
-            if (index == 2) {
-                index ++;
-            }
+//            if (index == 2) {
+//                index ++;
+//            }
+           
+           if (index == 1) {
+               index ++;
+           }
+
             
         }
     }

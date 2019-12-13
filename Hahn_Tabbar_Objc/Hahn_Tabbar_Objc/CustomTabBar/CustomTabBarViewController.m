@@ -51,11 +51,18 @@
 # pragma mark - 添加子类的数据
 - (void)tabBarControllerAddChildViewController
 {
+//    NSArray *classControllers = [NSArray array];
+//    classControllers = @[@"Demo1ViewController", @"Demo2ViewController", @"Demo4ViewController", @"Demo5ViewController"];
+//    NSArray *titles = @[@"首页", @"附近", @"聊天", @"我的"];
+//    NSArray *normalImages = @[@"home_normal", @"mycity_normal", @"message_normal", @"account_normal"];
+//    NSArray *selectImages = @[@"home_highlight", @"mycity_highlight", @"message_highlight", @"account_highlight"];
+    
+    
     NSArray *classControllers = [NSArray array];
-    classControllers = @[@"Demo1ViewController", @"Demo2ViewController", @"Demo4ViewController", @"Demo5ViewController"];
-    NSArray *titles = @[@"首页", @"附近", @"聊天", @"我的"];
-    NSArray *normalImages = @[@"home_normal", @"mycity_normal", @"message_normal", @"account_normal"];
-    NSArray *selectImages = @[@"home_highlight", @"mycity_highlight", @"message_highlight", @"account_highlight"];
+    classControllers = @[@"Demo1ViewController", @"Demo5ViewController"];
+    NSArray *titles = @[@"首页", @"我的"];
+    NSArray *normalImages = @[@"home_normal", @"account_normal"];
+    NSArray *selectImages = @[@"home_highlight", @"account_highlight"];
     
     [self TabbarControllerAddSubViewsControllers:classControllers addTitleArray:titles addNormalImagesArray:normalImages addSelectImageArray:selectImages];
 }
